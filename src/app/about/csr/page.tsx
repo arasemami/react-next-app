@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { fetchPosts } from "../services/apiService";
+import PostItem from "@/app/components/PostItem";
 
 const CSR = () => {
 
@@ -38,10 +39,7 @@ const CSR = () => {
       <h1 className="pb-5">Show the data with CSR Mode :</h1>
       <ul className="flex flex-col gap-4">
         {posts.map((post: any) => (
-          <li key={post.id}>
-            <h1 className="font-bold">{post.title}</h1>
-            <p>{post.body}</p>
-          </li>
+       <PostItem key={post.id} post={post} />
         ))}
       </ul>
     </main>
