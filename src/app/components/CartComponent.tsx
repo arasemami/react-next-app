@@ -3,7 +3,7 @@ import React from 'react';
 import { useStoreCart } from '../context/StoreContext';
 
 const CartComponent = () => {
-    const { products, addToCart, removeFromCart, clearCart } = useStoreCart();
+    const { products, removeFromCart, clearCart } = useStoreCart();
 
     return (
         <div>
