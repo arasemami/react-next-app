@@ -1,10 +1,12 @@
 "use client"
 import Link from "next/link";
 import { useStore } from "../store/useStore";
+import { useStoreCart } from "../context/StoreContext";
 
 const Header = () => {
 
     const { count, user } = useStore();
+    const { products } = useStoreCart();
 
     return (
         <header className="bg-blue-500 text-white p-4">
@@ -28,6 +30,9 @@ const Header = () => {
                         </li>
                         <li>
                             <Link href="/contact" className="text-white hover:text-gray-200">Contact</Link>
+                        </li>
+                        <li>
+                            <Link href="/cart" className="text-white hover:text-gray-200">Cart {products.length}</Link>
                         </li>
                     </ul>
                 </div>

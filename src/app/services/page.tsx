@@ -1,10 +1,10 @@
 
-
-
-
+ import ProductList from "../components/ProductList";
+ 
 export default function Services() {
-    return (
-   <div></div>
-    );
-  }
-  
+  return (
+    <div>
+      <ProductList />
+    </div>
+  );
+}
