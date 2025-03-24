@@ -1,7 +1,11 @@
-// components/Header.tsx
+"use client"
 import Link from "next/link";
+import { useStore } from "../store/useStore";
 
 const Header = () => {
+
+    const { count, user } = useStore();
+
     return (
         <header className="bg-blue-500 text-white p-4">
             <nav className="flex justify-between">
@@ -20,10 +24,19 @@ const Header = () => {
                             <Link href="/services" className="text-white hover:text-gray-200">Services</Link>
                         </li>
                         <li>
+                            <Link href="/counter" className="text-white hover:text-gray-200">Counter</Link>
+                        </li>
+                        <li>
                             <Link href="/contact" className="text-white hover:text-gray-200">Contact</Link>
                         </li>
                     </ul>
                 </div>
+
+                <div className="text-lg flex flex-row gap-2">
+                    <p>Counter: {count}</p>
+                    <p>User: {user.name ? user.name : 'Guest'}</p>
+                </div>
+
             </nav>
         </header>
     );

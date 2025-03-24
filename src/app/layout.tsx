@@ -24,11 +24,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="container">
-          <Header />
-          <main className="p-4">{children}</main>
-          <Footer />
+            <Header />
+            <main className="p-4">{children}</main>
+            <Footer />
         </div>
+
       </body>
-    </html>
+    </html >
   );
 }

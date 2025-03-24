@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { fetchPosts } from '../services/apiService';
 import PostItem from '@/app/components/PostItem';
-
+ 
 const SSR: FC = async () => {
   try {
     const posts: any[] = await fetchPosts();
